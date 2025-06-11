@@ -1,0 +1,40 @@
+
+
+
+
+<section class="tabla-container">
+  <table  class="table table-dark table-hover" >
+   
+    <thead>
+      <tr>
+        <th class="text-center">ID PRODUCTO</th>
+        <th class="text-center">Nombre</th>
+        <th class="text-center">Cantidad</th>
+        <th class="text-center">Precio</th>
+        <th class="text-center">IVA</th>
+        <th class="text-center" *ngIf="showCategoria">Categoría</th>
+        <th class="text-center">Estado</th>
+        <th class="text-center"></th>
+      </tr>
+    </thead>
+   
+    <tbody class="table-group-divider">
+      <tr *ngIf="snacks.length === 0">
+        <tr *ngIf="snacksFiltrados.length === 0">
+  <td colspan="8" class="text-center">No hay snacks disponibles</td>
+</tr>
+     <tr *ngFor="let snack of snacksFiltrados">
+        <td class="text-center">{{snack.id}}</td>
+        <td class="text-center">{{snack.name}}</td>
+        <td class="text-center">{{snack.amount}}</td>
+        <td class="text-center">{{snack.price | currency:'USD':'symbol':'1.2-2'}}</td>
+        <td class="text-center">{{snack.IVA | currency:'USD':'symbol':'1.2-2'}}</td>
+        <td class="text-center" *ngIf="showCategoria">{{snack.state}}</td>
+        <td class="text-center">{{snack.state}}</td>
+        <td class="text-center">
+          <button class="btn btn-danger btn-sm align-middle" style="vertical-align: middle; min-width: 70px;" (click)="deleteSnackFromApi(snack.id)">Borrar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>

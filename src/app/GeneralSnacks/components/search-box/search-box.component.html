@@ -1,0 +1,57 @@
+
+<div class="container">
+  <h5></h5>
+  <input type="text"
+    placeholder="Buscar snacks..."
+    class="search-box"
+    (keyup.enter)="searchTag()"
+    #txtTagInput />
+
+  
+   <button type="button" (click)="searchTag()" class="btn btn-outline-primary">Search</button>
+  <button class="search-button" (click)="openAddModal()">Agregar</button>
+</div>
+
+
+<div class="AddTab" *ngIf="showAddModal">
+  <div class="AddTabContent">
+    <button type="button" (click)="closeAddModal()" id="close-button" class="btn-close" aria-label="Close">
+      <svg width="18" height="18" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M5 5L15 15M15 5L5 15" stroke="#222" stroke-width="2.2" stroke-linecap="round"/>
+      </svg>
+    </button>
+    <h3 class="modal-title mb-3">Agregar Snack</h3>
+    <form class="snack-form" (ngSubmit)="addSnack()">
+  <div class="form-group mb-3">
+    <label for="snackName" class="form-label">Nombre</label>
+    <input id="snackName" class="form-control" type="text" [(ngModel)]="nombre" name="nombre" placeholder="Nombre del snack" required />
+  </div>
+  <div class="form-group mb-3">
+    <label for="snackCantidad" class="form-label">Cantidad</label>
+    <input id="snackCantidad" class="form-control" type="number" [(ngModel)]="cantidad" name="cantidad" placeholder="Cantidad" min="1" required />
+  </div>
+  <div class="form-group mb-3">
+    <label for="snackPrecio" class="form-label">Precio</label>
+    <input id="snackPrecio" class="form-control" type="number" [(ngModel)]="precio" name="precio" placeholder="Precio" min="0" step="0.01" required />
+  </div>
+  <div class="form-group mb-3">
+    <label for="snackCategoria" class="form-label">Categoría</label>
+    <select id="snackCategoria" class="form-select" [(ngModel)]="categoria" name="categoria" required>
+      <option value="Dulce">Dulce</option>
+      <option value="Salado">Salado</option>
+    </select>
+  </div>
+  <div class="form-group mb-4">
+    <label for="snackEstado" class="form-label">Estado</label>
+    <select id="snackEstado" class="form-select" [(ngModel)]="estado" name="estado" required>
+      <option value="Hay">Hay</option>
+      <option value="No hay">No hay</option>
+    </select>
+  </div>
+  <div class="d-flex justify-content-end">
+    <button type="submit" class="btn btn-primary px-4" >Agregar</button>
+  </div>
+</form>
+  
+  </div>
+</div>

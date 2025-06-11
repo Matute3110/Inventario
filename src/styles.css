@@ -1,1 +1,76 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --main-purple: #6c3cff;
+  --main-purple-dark: #402bff;
+  --main-gray-dark: #23213a;
+  --main-gray-medium: #2d2b3a;
+  --main-gray-border: #575555;
+  --main-white: #f3f3f3;
+  --main-accent: #a18aff;
+}
+
+body, .main-bg {
+  background: linear-gradient(135deg, var(--main-purple-dark) 0%, var(--main-gray-dark) 100%);
+  min-height: 100vh;
+  color: var(--main-white);
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.card, .tabla-container, .AddTabContent {
+  background: var(--main-gray-dark);
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(108,60,255,0.10), 0 1.5px 8px rgba(0,0,0,0.15);
+  border: 1px solid var(--main-gray-border);
+  color: var(--main-white);
+}
+
+h1, h2, h3, h4, h5 {
+  color: var(--main-accent);
+}
+
+.btn-primary, .search-button, .add-button {
+  background: var(--main-purple);
+  border: none;
+  color: #fff;
+  transition: background 0.2s, color 0.2s;
+}
+.btn-primary:hover, .search-button:hover, .add-button:hover {
+  background: var(--main-gray-dark);
+  color: var(--main-accent);
+}
+
+.table-dark {
+  background: var(--main-gray-dark);
+  color: var(--main-white);
+}
+
+input, select, textarea {
+  background: var(--main-gray-medium);
+  color: var(--main-white);
+  border: 1px solid var(--main-gray-border);
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: var(--main-purple);
+  box-shadow: 0 0 0 2px var(--main-purple-dark)33;
+}
+
+hr {
+  border-color: var(--main-purple);
+}
+
+.AddTabContent, .modal-content {
+  background: var(--main-gray-dark);
+  color: var(--main-white);
+  border-radius: 16px;
+  border: 1px solid var(--main-gray-border);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background: var(--main-gray-medium);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--main-purple);
+  border-radius: 4px;
+}

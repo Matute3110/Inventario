@@ -1,0 +1,204 @@
+.search-box{
+    
+    width: 60%;
+    height: 40px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    padding: 0 10px;
+    font-size: 16px;
+    box-sizing: border-box;
+    margin-right: 20px;
+
+}
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+.search-button{
+    color: white;
+    width: 10%;
+    height: 40px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background-color: #575555;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-button, a.list-group-item {
+    border-radius: 5px;
+    transition: background 0.2s, color 0.2s;
+}
+
+.search-button:active,
+a.list-group-item:active,
+a.list-group-item.active {
+    background-color: #ffc107 !important;
+    color: #333 !important;
+}
+
+
+.add-button {
+    width: 30%;
+    height: 40px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background-color: #575555;
+    color: white;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+.close-button {
+    width: 30%;
+    height: 40px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background-color: #575555;
+    color: white;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+.AddTab {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeInBg 0.3s;
+}
+
+@keyframes fadeInBg {
+  from { background: rgba(0,0,0,0); }
+  to { background: rgba(0,0,0,0.35); }
+}
+
+.AddTab .AddTabContent {
+  background: #fff;
+  padding: 2.5rem 2.5rem 2rem 2.5rem;
+  border-radius: 18px;
+  min-width: 340px;
+  max-width: 95vw;
+  box-shadow: 0 8px 32px 0 rgba(31,38,135,0.18), 0 2px 8px #0002;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  position: relative;
+  animation: popIn 0.25s cubic-bezier(.77,0,.18,1);
+}
+
+@keyframes popIn {
+  from { transform: scale(0.95) translateY(30px); opacity: 0; }
+  to { transform: scale(1) translateY(0); opacity: 1; }
+}
+
+.AddTab .modal-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #402bff;
+  margin-bottom: 1.2rem;
+  text-align: center;
+}
+
+.AddTab .form-group {
+  margin-bottom: 1.1rem;
+}
+
+.AddTab .form-label {
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 0.3rem;
+}
+
+.AddTab .form-control, .AddTab .form-select {
+  border-radius: 7px;
+  border: 1px solid #d1d5db;
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  background: #f8f9fa;
+  transition: border 0.2s;
+}
+.AddTab .form-control:focus, .AddTab .form-select:focus {
+  border-color: #402bff;
+  outline: none;
+  background: #fff;
+}
+
+.AddTab .d-flex {
+  margin-top: 1.2rem;
+}
+
+.AddTab .btn-primary {
+  background: #402bff;
+  border: none;
+  border-radius: 7px;
+  font-weight: 500;
+  padding: 0.6rem 2.2rem;
+  font-size: 1.1rem;
+  box-shadow: 0 2px 8px #402bff22;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+.AddTab .btn-primary:hover {
+  background: #2a1e8c;
+  box-shadow: 0 4px 16px #402bff33;
+}
+
+#close-button {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  background: #f8f9fa;
+  border-radius: 50%;
+  box-shadow: 0 1px 4px #0001;
+  border: none;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+  padding: 0;
+}
+#close-button svg {
+  display: block;
+  margin: auto;
+}
+#close-button:hover {
+  background: #ffc107;
+}
+
+.SnackName{
+    width:100%;
+    margin-bottom:8px;
+
+}
+.QualitySnack{
+    width:100%;
+    margin-bottom:8px;
+
+}
+.SnackPrice{
+    width:100%;
+    margin-bottom:8px;
+}
+.SnackCategory{width:100%;
+    margin-bottom:8px;}
+
+.SnackState{
+    width:100%;
+    margin-bottom:16px;
+}
+.ButtonSelect{
+    display:flex;
+    gap:8px;
+    justify-content:flex-end;
+}
